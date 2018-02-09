@@ -1,0 +1,6 @@
+---
+# defaults file for ibm-limits-conf
+#
+ibm_limits_user: root
+ibm_limits_nofile: 150000
+

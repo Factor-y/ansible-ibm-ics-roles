@@ -1,0 +1,11 @@
+---
+# tasks file for ibm-limits-conf
+#
+
+- name: Set nofile for WAS user
+  pam_limits: 
+    comment: WebSphere limits set by ansible-ibm-ics-roles
+    domain: "{{ibm_limits_user}}"
+    limit_type: "-"
+    limit_item: nofile
+    value: "{{ibm_limits_nofile}}"
